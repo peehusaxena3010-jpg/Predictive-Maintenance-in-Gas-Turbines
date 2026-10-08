@@ -1,0 +1,13 @@
+- The `rf_models` object must be a Python dict with keys:
+  - `"Speed"`
+  - `"Bearing 1 Metal temperature"`
+  - `"Bearing 2 Metal temperature"`
+  - `"Bearing 3 Metal temperature"`
+  - `"Bearing 4 Metal temperature"`
+  - `"Bearing 5 Metal temperature"`
+- Each value should be the trained scikit-learn regressor (RandomForestRegressor).
+
+Example from notebook:
+```python
+import joblib
+joblib.dump(rf_models, "models/rf_models.pkl")
